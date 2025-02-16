@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
 app.get("/user", (req, res) => {
   res.send({ username: "hlwy=user" });
 });
+app.get("/usernew", (req, res) => {
+  const { name } = req.query;
+  res.send({ username: name });
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
